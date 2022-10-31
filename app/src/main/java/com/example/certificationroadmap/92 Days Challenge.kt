@@ -27,7 +27,12 @@ fun main() {
 //    for(people in peopleAges){
 //        println(people.key + people.value)
 //    }
+
+    peopleAges.forEach { print("${it.key} is ${it.value}") }
     println(peopleAges.map {" ${it.key} is ${it.value}" }.joinToString(","))
-    val filterdNames = peopleAges.filter { it.key.length < 4 }
+    val filterdNames = peopleAges.filter { it.key.length <= 4 }
     println(filterdNames)
-}
+
+   val peopleNames = listOf<String>("Hassan", "MOhammed","Albar","Ali")
+    println(peopleNames.sorted())
+    print(peopleNames.sortedWith({str1 : String, str2 : String -> str1.length - str2.length}))}
